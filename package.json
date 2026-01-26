@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@heroui/navbar": "^2.2.27",
+    "@heroui/react": "^2.8.7",
     "bcryptjs": "^3.0.3",
     "mongodb": "^7.0.0",
     "mongoose": "^9.1.4",
