@@ -1,5 +1,5 @@
 .catTitle {
-  color: var(--primary-);
+  color: var(--primary-color);
 }
 
 .item {
@@ -39,4 +39,39 @@
 .decs {
   font-size: 20px;
   font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .item {
+    flex-direction: column !important;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+
+  .imgContainer {
+    height: 300px;
+    width: 400px;
+    position: relative;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+    max-width: 850px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .decs {
+    font-size: 16px;
+  }
 }

@@ -33,7 +33,7 @@ const Category = async ({ params }) => {
           </div>
 
           <div className={styles.imgContainer}>
-            <Image src={item.image} alt="" fill className={styles.img} />
+            <Image src={item.image} alt="" fill={true} className={styles.img} />
           </div>
         </div>
       ))}
