@@ -5,8 +5,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-// مكون منفصل لقراءة الـ params
-function LoginContent() {
+const Login = () => {
   const { status } = useSession();
   const router = useRouter();
   const params = useSearchParams();
@@ -75,15 +74,6 @@ function LoginContent() {
         Create new account
       </Link>
     </div>
-  );
-}
-
-// المكون الرئيسي مع Suspense
-const Login = () => {
-  return (
-    <React.Suspense fallback={<p>Loading...</p>}>
-      <LoginContent />
-    </React.Suspense>
   );
 };
 
