@@ -19,7 +19,6 @@ const Dashboard = () => {
     fetcher,
   );
 
-  // ✅ redirect الصح
   useEffect(() => {
     if (status === "unauthenticated") {
       router.push("/dashboard/login");

@@ -4,11 +4,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: relative; /* مهم للموبايل منيو */
 }
 
 .logo {
   font-weight: bold;
   font-size: 22px;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .links {
@@ -18,19 +25,120 @@
 }
 
 .logout {
-  padding: 5px;
+  padding: 5px 10px;
   border: none;
   background-color: var(--primary-color);
   color: white;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .login {
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid var(--primary-color);
   background-color: white;
   color: var(--primary-color);
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 4px;
 }
+
+.menu {
+  display: none;
+  align-items: center;
+}
+
+.menuIcon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+.closeIcon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  color: red;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: right 0.35s ease;
+  z-index: 9999;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s ease;
+}
+
+.open {
+  left: 0;
+}
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.mobileLink {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+.mobileLink:hover {
+  color: #f0f0f0;
+}
+
+.mobileLogout {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuTitle {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
+  .links {
+    display: flex;
+  }
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .menu {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .logoImage {
+    width: 120px;
+    height: auto;
+  }
+}
+
