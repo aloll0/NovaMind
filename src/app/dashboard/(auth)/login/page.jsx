@@ -64,7 +64,7 @@ const Login = () => {
       <button
         onClick={() => signIn("google")}
         className={`${styles.button} ${styles.google}`}
-      >
+      >   
         Login with Google
       </button>
 
